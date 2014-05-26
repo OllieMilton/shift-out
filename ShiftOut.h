@@ -20,7 +20,7 @@ class ShiftOut {
             delete latchout;
         }
         
-        void write(int8_t data) {
+        void write(int data) {
             *latchout = 0;
             for(int i = registerCount - 1; i >=  0; i--){
                 *clkout = 0;
