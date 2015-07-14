@@ -4,17 +4,17 @@
 #include <mbed.h>
 
 /** A simple serial driver for a shift register that uses only three digital out pins leaving SPI and i2c free. 
- * ShiftOut can be configured bitness shift register but defaults to eight bits.
+ * ShiftOut can be configured for any size shift register but defaults to eight bits.
  */
 class ShiftOut {
 
     public :
     
-        /** Constructs a new ShiftOut with the given three pins.
-         * clk - the pin to use for the shift register clock.
-         * data - the pin to use for the shift register data line.
-         * latch - the pin to use for the shift register latch.
-         * registerCount - the number of registers in the shift register, defaults to eight.
+        /** Constructs a new ShiftOut with the given three pins.\n
+         * clk - the pin to use for the shift register clock.\n
+         * data - the pin to use for the shift register data line.\n
+         * latch - the pin to use for the shift register latch.\n
+         * registerCount - the number of registers in the shift register, defaults to eight.\n
          */
         ShiftOut(PinName clk, PinName data, PinName latch, int8_t registerCount = 0x08) {
             clkout = new DigitalOut(clk);
