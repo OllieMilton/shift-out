@@ -10,11 +10,11 @@ class ShiftOut {
 
     public :
     
-        /** Constructs a new ShiftOut with the given three pins.\n
-         * clk - the pin to use for the shift register clock.\n
-         * data - the pin to use for the shift register data line.\n
-         * latch - the pin to use for the shift register latch.\n
-         * registerCount - the number of registers in the shift register, defaults to eight.\n
+        /** Constructs a new ShiftOut with the given three pins.
+         * @param clk - the pin to use for the shift register clock.
+         * @param data - the pin to use for the shift register data line.
+         * @param latch - the pin to use for the shift register latch.
+         * @param registerCount - the number of registers in the shift register, defaults to eight.
          */
         ShiftOut(PinName clk, PinName data, PinName latch, int8_t registerCount = 0x08) {
             clkout = new DigitalOut(clk);
